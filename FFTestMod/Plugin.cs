@@ -21,10 +21,7 @@ public class Plugin : BaseUnityPlugin {
         
         harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
         // harmony.PatchAll(typeof(DynamicGridPatch));
-        // harmony.PatchAll(typeof(ItemGroupInstrPatch));
-        harmony.PatchAll(typeof(DestroyInstrPatch));
-        harmony.PatchAll(typeof(ItemGroupOnAxisInstrPatch));
-        ItemRendererPatch.Patch(harmony);
+        // harmony.PatchAll(typeof(DestroyInstrPatch));
         harmony.PatchAll(typeof(ProcessDataPatch));
         harmony.PatchAll(typeof(CheatManagerPatch));
         harmony.PatchAll(typeof(CustomInstructionPatch));
