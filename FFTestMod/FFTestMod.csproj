@@ -42,8 +42,20 @@
         <Reference Include="UniTask">
             <HintPath>lib/UniTask.dll</HintPath>
         </Reference>
-        <Reference Include="PrimeTweeen.Runtime">
-            <HintPath>lib/PrimeTweeen.Runtime.dll</HintPath>
+        <Reference Include="PrimeTween">
+            <HintPath>lib/PrimeTween.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="Sonity">
+            <HintPath>lib/Sonity.Public.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="Sonity">
+            <HintPath>lib/Sonity.Internal.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="NCalc">
+            <HintPath>lib/NCalc.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="NCalc">
+            <HintPath>lib/NCalc.Sync.dll</HintPath>
         </Reference>
     </ItemGroup>
 </Project>

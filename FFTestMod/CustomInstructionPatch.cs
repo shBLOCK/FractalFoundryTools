@@ -24,7 +24,12 @@ public static class CustomInstructionPatch {
             if (!flag) stringBuilder.AppendLine();
             flag = false;
             variableData.TryGetValue(definitionData.Id, out var overrideData);
-            object friendlyValue = EditVariableUI.GetFriendlyValue(definitionData, overrideData);
+            object friendlyValue;
+            if (definitionData.Type != EVarType.Float) {
+                friendlyValue = EditVariableUI.GetFriendlyValue(definitionData, overrideData);
+            } else {
+                friendlyValue = definitionData.GetOverriddenValue(overrideData);
+            }
             stringBuilder.Append($"<u>{definitionData.Name.PadRight(totalWidth)}: </u>");
             if (overrideData != null) {
                 stringBuilder.Append(overrideData.Value.VariableMode switch {
