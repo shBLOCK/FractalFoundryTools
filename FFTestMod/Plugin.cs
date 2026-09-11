@@ -53,6 +53,15 @@ public class Plugin : BaseUnityPlugin {
             VariableLinkPatch.EXPR_CACHE.Clear();
             Logger.LogInfo("Cleared EXPR_CACHE");
         }
+
+        if (Input.GetKeyDown(KeyCode.H)) {
+            var filter = Manager<FactorySelectionManager>.Instance.Selected.FirstOrDefault() as FilterInstruction;
+            if (filter) {
+                Logger.LogInfo($"{filter.Data.FilterConstraint.Value.VariableMode}");
+                Logger.LogInfo($"{filter.Data.FilterConstraint.Value.VariableDefinition}");
+                Logger.LogInfo($"{filter.Data.FilterConstraint.Value.VariableDefinitionId}");
+            }
+        }
     }
 
     private int recursiveCountCustomInstructions(CustomInstructionData data) {

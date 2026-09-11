@@ -56,6 +56,7 @@ public class PluginUtils {
 
         str.Append($"OffsetUnit={item.OffsetUnit}, ");
         str.Append($"LocalPosition={item.LocalPosition}");
+        str.Append($"UnscaledLength={item.UnscaledLength}");
         
         str.Append(")");
         return str.ToString();
